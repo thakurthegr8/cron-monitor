@@ -12,6 +12,7 @@ const MonitorSchema = new Schema(
   { timestamps: true }
 );
 
-const Monitor = mongoose.model("Monitors", MonitorSchema);
+const Monitor =
+  mongoose.models.Monitor || mongoose.model("Monitor", MonitorSchema);
 
 export default Monitor;
